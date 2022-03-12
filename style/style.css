@@ -1,0 +1,132 @@
+html, body {
+    max-height: 100vh;
+    overflow-y: hidden;
+} 
+body {
+    margin: 0;
+    display: grid;
+    grid-template-columns: 12rem auto 15rem;
+    background-color: black;
+    background-image: url(stars.jpeg);
+    color: yellow;
+}
+header {
+    grid-column-start: 2;
+    grid-column-end: 4;
+    grid-row-start: 1;
+    grid-row-end: 3;
+    align-self: center;
+}
+button {
+    margin: 0.5rem;
+    border: 0;
+    padding: 0.5rem;
+    border-radius: 1rem;
+    background-color: yellow;
+    color: black;
+}
+button, h1 {
+    font-size: 4rem;
+}
+h1 {
+    margin: 0 15rem 0 0;
+    text-align: center;
+    align-self: center;
+}
+aside {
+    grid-row-start: 2;
+    grid-row-end: 5;
+    height: calc(100vh - 6.5rem);
+    overflow-y: scroll;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+aside::-webkit-scrollbar {
+    display: none;
+}
+div {
+    min-height: 5vh;
+    margin: 0 0.5rem 0.5rem;
+    display: grid;
+    grid-template-columns: auto auto;
+    align-items: center;
+}
+img {
+    max-height: 5vh;
+    justify-self: end;
+}
+main {
+    grid-column-start: 2;
+    grid-column-end: 4;
+    display: grid;
+    grid-template-columns: auto 15rem;
+}
+main img {
+    max-height: 80vh;
+    max-width: 100%;
+    margin: 0 auto;
+}
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0 0.5rem;
+    padding-left: 2rem;
+    text-indent: -2rem;
+}
+@media (max-width: 48em) and (min-width: 36em) {
+    body {
+        grid-template-columns: 12rem auto;
+    }
+    header, main {
+        grid-column-end: 3;
+    }
+    h1 {
+        margin-right: 0;
+    }
+    main {
+        grid-template-columns: auto;
+    }
+    main img {
+        max-height: 60vh;
+        margin-bottom: 0.5rem;
+    }
+    ul {
+        text-align: center;
+    }
+}
+@media (max-width: 36em) {
+    body, main {
+        grid-template-columns: auto;
+        overflow-y: scroll;
+        justify-items: center;
+    }
+    button, header, aside, main {
+        grid-column-start: 1;
+        grid-column-end: 2;
+    }
+    header {
+        grid-row-start: 1;
+        grid-row-end: 2;
+    }
+    main {
+        grid-row-start: 2;
+    }
+    button {
+        grid-row-start: 3;
+        width: 12rem;
+    }
+    aside {
+        grid-row-start: 4;
+        height: 100%;
+    }
+    h1 {
+        margin-right: 0;
+    }
+    main img {
+        margin-bottom: 0.5rem;
+        max-height: 100vh;
+    }
+    ul {
+        text-align: center;
+    }
+}
